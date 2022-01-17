@@ -1,6 +1,7 @@
 public class Doctor {
     static int id = 0; //Autoincrement
     String name;
+    String email;
     String speciality;
 
     Doctor(){
