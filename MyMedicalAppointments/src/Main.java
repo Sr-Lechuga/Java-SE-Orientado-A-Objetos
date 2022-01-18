@@ -8,7 +8,7 @@ public class Main {
 
         //showMenu();
 
-        Doctor myDoctor = new Doctor("Anahi", "Cardiologist");
+        Doctor myDoctor = new Doctor("Anahi", "anahi@gmail.com");
         myDoctor.addAvailableAppointment(new Date(), "4pm");
         myDoctor.addAvailableAppointment(new Date(), "10am");
         myDoctor.addAvailableAppointment(new Date(), "1pm");
@@ -17,7 +17,7 @@ public class Main {
             System.out.println(availableAppointment.getDate() + " "
                 + availableAppointment.getTime());
         }
-
+        System.out.println("\n\n" + myDoctor);
 
         int i = 0;
         int b = 2;
