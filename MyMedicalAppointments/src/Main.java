@@ -24,31 +24,10 @@ public class Main {
         //b = 0;
         /*Primitives lives in stack memory*/
 
-
+        System.out.println("\n\n");
         Patient patient = new Patient("Alejandra", "alejandra@gmail.com");
-        Patient patient1 = new Patient("Anahi", "anahi@gmail.com");
-        /*Objects live in heap memory
-        * Only the memory direction is saves in stack memory*/
 
-        System.out.println("\n \n" + patient.getName());
-        System.out.println(patient1.getName());
-        patient1 = patient;
-        /*Asignate the same memory direction of patient to patient1*/
-
-        System.out.println(patient.getName());
-        System.out.println(patient1.getName());
-
-        patient1.setName("Manuel");
-        /*Asignation of objects make that any change that occurs in one, occurs in the other
-        * Since they both are pointing at the same structure in memory*/
-        System.out.println(patient.getName());
-        System.out.println(patient1.getName());
-
-        /*patient.setWeight(54.6);
-        System.out.println(patient.getWeight());
-
-        patient.setPhoneNumber("123456789");
-        System.out.println(patient.getPhoneNumber());*/
+        System.out.println(patient.toString());
     }
 }
 
