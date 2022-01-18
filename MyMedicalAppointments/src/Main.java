@@ -1,4 +1,5 @@
 import model.Doctor;
+import model.Nurse;
 import model.Patient;
 import model.User;
 
@@ -9,13 +10,6 @@ public class Main {
 
         //showMenu();
 
-        /*Instances of User cannot be created. But...*/
-        User user = new Doctor("Anahi", "anahi@anahi.com") {
-            @Override
-            public int getId() {
-                return super.getId();
-            }
-        };
 
         Doctor myDoctor = new Doctor("Anahi", "anahi@gmail.com");
         myDoctor.addAvailableAppointment(new Date(), "4pm");
@@ -37,6 +31,13 @@ public class Main {
         Patient patient = new Patient("Alejandra", "alejandra@gmail.com");
 
         System.out.println(patient);
+
+        System.out.println("\n\n");
+        /*It is possible to create different object from an abstract class. Changing assignation, different inherited
+        * objects will be created. And different behaviors will be seen in the method showDataUser*/
+        User user = new Nurse("Daniel","daniel@daniel.com");
+
+        user.showDataUser();
     }
 }
 
