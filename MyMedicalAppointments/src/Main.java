@@ -1,7 +1,4 @@
-import model.Doctor;
-import model.Nurse;
-import model.Patient;
-import model.User;
+import model.*;
 
 import java.util.Date;
 
@@ -35,9 +32,31 @@ public class Main {
         System.out.println("\n\n");
         /*It is possible to create different object from an abstract class. Changing assignation, different inherited
         * objects will be created. And different behaviors will be seen in the method showDataUser*/
-        User user = new Nurse("Daniel","daniel@daniel.com");
 
+        User user = new Nurse("Daniel","daniel@daniel.com");
         user.showDataUser();
+
+        /*It makes a "custom" User. It means that the methods available for User, are overwritten as we please.
+        * It has a short lifetime*/
+        User userTest = new User("Daniel","dani@daniel.com") {
+            @Override
+            public void showDataUser() {
+                System.out.println("\n\n");
+                System.out.println("Doctor");
+                System.out.println("Works in hospital Blue Cross");
+                System.out.println("Department: Nourishing");
+            }
+        };
+
+        userTest.showDataUser();
+
+        /*Also work with Interfaces*/
+        ISchedulable iSchedulable = new ISchedulable() {
+            @Override
+            public void schedule(Date date, String time) {
+
+            }
+        };
     }
 }
 
