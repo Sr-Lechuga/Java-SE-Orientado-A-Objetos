@@ -1,7 +1,7 @@
-import javax.print.Doc;
-import java.util.Date;
+import model.Doctor;
+import model.Patient;
 
-import static ui.UIMenu.*;
+import java.util.Date;
 
 public class Main {
     public static void main(String[] args) {
@@ -20,14 +20,14 @@ public class Main {
         System.out.println("\n\n" + myDoctor);
 
         int i = 0;
-        int b = 2;
+        int b = i;
         //b = 0;
         /*Primitives lives in stack memory*/
 
         System.out.println("\n\n");
         Patient patient = new Patient("Alejandra", "alejandra@gmail.com");
 
-        System.out.println(patient.toString());
+        System.out.println(patient);
     }
 }
 
