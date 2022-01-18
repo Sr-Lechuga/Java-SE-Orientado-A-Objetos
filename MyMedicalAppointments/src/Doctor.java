@@ -2,32 +2,25 @@ import javax.print.Doc;
 import java.util.ArrayList;
 import java.util.Date;
 
-public class Doctor {
-    static int id = 0; //Autoincrement
-    private String name;
-    private String email;
+public class Doctor extends User{
+
     private String speciality;
 
-
-    Doctor(){
-        System.out.println("Building Doctor object");
+    Doctor(String name, String email){
+        super(name,email);
+        System.out.println("The name of the assigned Doctor is: " + name);
+        this.speciality = speciality;
     }
 
-    Doctor(String name, String speciality){
-        System.out.println("The name of the assigned Doctor is: " + name);
-        this.name = name;
+    public String getSpeciality() {
+        return speciality;
+    }
+
+    public void setSpeciality(String speciality) {
         this.speciality = speciality;
-        id++;
     }
 
     //Behaviors
-    public void showName(){
-        System.out.println(name);
-    }
-
-    public void showId(){
-        System.out.println("Doctor ID: " + id);
-    }
 
     ArrayList<AvailableAppointment> availableAppointments = new ArrayList<>();
     public void  addAvailableAppointment(Date date, String time){
@@ -42,8 +35,13 @@ public class Doctor {
         private  int id;
         private Date date;
         private String time;
-        /*Since the appointments only exist if a doctor exists and it only exists for doctor to use
+        /*Since the appointments only exist if a doctor exists, and it only exists for doctor to use
         * we use an internal class*/
+
+        /*We use them, when we need a complex entity related to the object, and it's existence
+        * depends on the existence of the object. A weak entity*/
+
+        /*Note that static internal classes, doesn't need to be instanced*/
 
         public AvailableAppointment(Date date, String time){
             this.date = date;
