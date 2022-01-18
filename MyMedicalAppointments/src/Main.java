@@ -1,5 +1,6 @@
 import model.Doctor;
 import model.Patient;
+import model.User;
 
 import java.util.Date;
 
@@ -7,6 +8,14 @@ public class Main {
     public static void main(String[] args) {
 
         //showMenu();
+
+        /*Instances of User cannot be created. But...*/
+        User user = new Doctor("Anahi", "anahi@anahi.com") {
+            @Override
+            public int getId() {
+                return super.getId();
+            }
+        };
 
         Doctor myDoctor = new Doctor("Anahi", "anahi@gmail.com");
         myDoctor.addAvailableAppointment(new Date(), "4pm");

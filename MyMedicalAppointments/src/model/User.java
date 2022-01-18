@@ -1,6 +1,9 @@
 package model;
 
-public class User {
+/*Abstract classes reunite characteristics of interfaces and inheritance.
+* An abstract class can define methods and attributes to be inherited.
+* Different from an interface, it isn't obligatory to implement all methods*/
+public abstract class User {
     private int id;
     private String name;
     private String email;
