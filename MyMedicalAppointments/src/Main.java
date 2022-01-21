@@ -36,27 +36,7 @@ public class Main {
         User user = new Nurse("Daniel","daniel@daniel.com");
         user.showDataUser();
 
-        /*It makes a "custom" User. It means that the methods available for User, are overwritten as we please.
-        * It has a short lifetime*/
-        User userTest = new User("Daniel","dani@daniel.com") {
-            @Override
-            public void showDataUser() {
-                System.out.println("\n\n");
-                System.out.println("Doctor");
-                System.out.println("Works in hospital Blue Cross");
-                System.out.println("Department: Nourishing");
-            }
-        };
 
-        userTest.showDataUser();
-
-        /*Also work with Interfaces*/
-        ISchedulable iSchedulable = new ISchedulable() {
-            @Override
-            public void schedule(Date date, String time) {
-
-            }
-        };
     }
 }
 
