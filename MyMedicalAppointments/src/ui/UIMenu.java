@@ -34,6 +34,7 @@ public class UIMenu {
                 case 2:
                     response = 0;
                     authUSer(2);
+                    UIPatientMenu.showPatientMenu();
                     break;
                 case 0:
                     System.out.println("Thank you for you visit");
@@ -68,7 +69,7 @@ public class UIMenu {
                         emailCorrect = true;
                         //Get Logged user
                         doctorLogged = d;
-                        //Show Doctor menu
+                        UIDoctorMenu.showDoctorMenu();
                     }
                 }
             }else if (UserType == 2){
@@ -76,13 +77,14 @@ public class UIMenu {
                     if (p.getEmail().equals(email)){
                         emailCorrect = true;
                         patientLogged = p;
-                        showPatientMenu();
+                        UIPatientMenu.showPatientMenu();
                     }
                 }
             }
         }while (!emailCorrect);
     }
 
+    /*Deprecated*/
     public static void showPatientMenu(){
         int response = 0;
         do {
