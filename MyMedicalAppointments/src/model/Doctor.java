@@ -11,8 +11,6 @@ public class Doctor extends User{
 
     public Doctor(String name, String email){
         super(name,email);
-        System.out.println("The name of the assigned model.Doctor is: " + name);
-        this.speciality = speciality;
     }
 
     public String getSpeciality() {

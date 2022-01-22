@@ -18,8 +18,8 @@ public class UIMenu {
 
         int response = 0;
         do {
-            System.out.println("1. model.Doctor");
-            System.out.println("2. model.Patient");
+            System.out.println("1. Doctor");
+            System.out.println("2. Patient");
             System.out.println("0. Exit");
 
             Scanner sc = new Scanner(System.in);
@@ -29,6 +29,7 @@ public class UIMenu {
                 case 1:
                     System.out.println("Doctor");
                     authUSer(1);
+                    UIDoctorMenu.showDoctorMenu();
                     break;
                 case 2:
                     response = 0;
